@@ -41,6 +41,13 @@ body{
     animation-duration: blinkTextCursor 1s;
 }
 
+.anim-typewriter2{
+    animation: typewriter2 1s steps(500) 1s 1 normal both,
+             blinkTextCursor 500ms steps(5) infinite normal;
+
+    animation-duration: blinkTextCursor 1s;
+}
+
 @keyframes typewriter{
 
   from{width: 0;}
@@ -51,6 +58,12 @@ body{
 
     from{width: 0;}
     to{width: 32em;}
+    
+  }
+@keyframes typewriter2{
+
+    from{width: 0;}
+    to{width: 13em;}
     
   }
 @keyframes blinkTextCursor{
