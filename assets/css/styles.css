@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 /* Global */
-html{
+ html{
   min-height: 100%;
   overflow: hidden;
 }
@@ -11,14 +11,8 @@ body{
   padding: 4em;
   color: rgba(255,255,255,.75);
   font-family: 'Anonymous Pro', monospace;  
-  background-color: rgb(25,25,25); 
-  min-height: 100vh; margin:0; 
+  background-color: rgb(25,25,25);  
 }
-
-header{
-    min-height:50px; background:lightcyan;
-}
-
 .line-1{
     position: relative;
     top: 50%;  
@@ -30,29 +24,41 @@ header{
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);    
-}
+} 
 
 /* Animation */
 .anim-typewriter{
-    animation: typewriter 1.4s steps(500) 1.2s 1 normal both,
+    animation: typewriter 1.4s steps(500) 4s 1 normal both,
              blinkTextCursor 500ms steps(5) infinite normal;
 
     animation-duration: blinkTextCursor 1s;
 }
+
+.anim-typewriter1{
+    animation: typewriter1 1.8s steps(500) 1s 1 normal both,
+             blinkTextCursor 500ms steps(5) infinite normal;
+
+    animation-duration: blinkTextCursor 1s;
+}
+
 @keyframes typewriter{
 
   from{width: 0;}
   to{width: 14em;}
   
 }
+@keyframes typewriter1{
+
+    from{width: 0;}
+    to{width: 32em;}
+    
+  }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
   
 }
 
-footer{ min-height:50px; background:PapayaWhip; }
 
-/* The article fills all the space between header & footer */
-body{ display:flex; flex-direction:column; }
-article{ flex:1; }
+
+  
