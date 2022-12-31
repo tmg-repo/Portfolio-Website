@@ -4,7 +4,7 @@
 /* Global */
  html{
   min-height: 100%;
-  overflow: hidden;
+  overflow: scroll;
 }
 body{
   height: calc(100vh - 8em);
@@ -86,14 +86,21 @@ body{
 }
 
 nav {
-    position: sticky;
+    overflow: hidden;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 3.5rem;
+    align-items: baseline;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: rgb(25,25,25);  
+}
+
+nav:hover {
+    border-bottom: 3px solid;
+    border-color: white;
 }
 
 nav a {
@@ -109,7 +116,8 @@ nav a:hover {
   
 nav ul {
     display: flex;
-    gap: 6rem;
+    gap: 1rem;
+    list-style: none;
 }
 
 .burger-menu {
@@ -126,27 +134,204 @@ nav ul {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-
+    margin-top: 10px;
 }
 
 .hero ul {
     list-style: none;
-    margin-left: -100px;
+    line-height: 200%;
 }
 
-#about h2 {
+.hero h2 {
+    padding-top: 6.5%;
     align-items: center;
     border-bottom: 5px solid red;
     border-color: red;
 }
 
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.skills h2 {
+    padding-top: 6.5%;
+    align-items: center;
+    border-bottom: 5px solid red;
+    border-color: red;
+}
+
+.skills ul {
+    list-style: none;
+    line-height: 200%;
+}
+
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.projects h2 {
+    padding-top: 6.5%;
+    align-items: center;
+    border-bottom: 5px solid red;
+    border-color: red;
+}
+
+.container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  .cards {
+    display: flex;
+    padding: 25px 0px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-color: white;
+  }
+
+  .card:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .card:hover {
+    color: white;
+    background: var(--red);
+  }
+  
+  .card .card-title {
+    font-size: 20px;
+  }
+  
+  .card .card-content {
+    margin: 20px 0;
+    max-width: 85%;
+  }
+  
+  .card .card-link-wrapper {
+    margin-top: auto;
+  }
+  .card .card-link-wrapper:hover {
+    color: white;
+    border-bottom: 5px solid red;
+    border-color: red;
+  }
+  
+  .card .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: var(--red);
+    padding: 6px 12px;
+    border-radius: 8px;
+  }
+  
+  .cards::-webkit-scrollbar {
+    height: 12px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb,
+  .cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+    background: var(--darkred);
+  }
+  
+  .cards::-webkit-scrollbar-track {
+    background: var(--thumb);
+  }
+  
+  @media (min-width: 500px) {
+    .card {
+      flex-basis: calc(50% - 10px);
+    }
+  
+    .card:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: 700px) {
+    .card {
+      flex-basis: calc(calc(100% / 3) - 20px);
+    }
+  
+    .card:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  
+  @media (min-width: 1100px) {
+    .card {
+      flex-basis: calc(25% - 30px);
+    }
+  
+    .card:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.contact h2 {
+    padding-top: 6.5%;
+    align-items: center;
+    border-bottom: 5px solid red;
+    border-color: red;
+}
+
+.contact u:hover {
+    color: white;
+    border-bottom: 5px solid red;
+    border-color: red;
+}
+
+footer {
+    overflow: hidden;
+    position: static;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 15rem rem;
+    width: 100%;
+    background-color: rgb(25,25,25); 
+    border-top: 1px solid white;
+}
 
 
-  
-  
-  
-  
-  
 
 
   
