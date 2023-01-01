@@ -2,7 +2,7 @@
  
 ## Getting started
 
-Simply visit tmgportfolio.netlify.app to check it out.
+Simply visit <a href="https://tmgportfolio.netlify.app">tmgportfolio.netlify.app</a> to check it out.
 
 ## Project description
 
